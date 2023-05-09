@@ -1,0 +1,84 @@
+<section class="login">
+
+    <div class="container py-5 bg-light">
+        <div class="row g-0">
+            <div class="col-lg-5">
+               
+                <img src="https://i.postimg.cc/Xq131WH7/jjj.jpg" alt="" class="img-fluid">
+
+                <!-- <img src="https://i.postimg.cc/vTSthwxb/register-Img.jpg" alt="" class="img-fluid"> -->
+
+            </div>
+
+            <div class="col-lg-7 py-5 text-center">
+                <h1 class="animate__animated animate__heartBeat animate_infinite"> Baggit</h1>
+
+                <form [formGroup]="registerForm">
+
+                    <div class="form-row py-3 pt-5">
+
+                        <div class="offset-1 col-lg-10">
+                            <input formControlName="name" type="text" class="inp px-3" placeholder="Name" id="name" name="username">
+                        </div>
+                        <div *ngIf="this.registerForm.get('name')?.errors && this.registerForm.get('name')?.touched" class="text-start mt-2">
+                            <p class="text-danger fs-5">Enter Your Name</p>
+                          </div>
+
+                    </div>
+
+                    <div class="form-row py-3 pt-5">
+
+                        <div class="offset-1 col-lg-10">
+                            <input formControlName="mobile" type="text" class="inp px-3" placeholder="Phone Number" id="number" name="phonenumber">
+                        </div>
+                        <div *ngIf="this.registerForm.get('mobile')?.errors && this.registerForm.get('mobile')?.touched" class="text-start mt-2">
+                            <p class="text-danger fs-5">Enter Your Mobile Number</p>
+                          </div>
+
+                    </div>
+
+                    <div class="form-row py-3 pt-5">
+
+                        <div class="offset-1 col-lg-10">
+                            <input formControlName="email" type="text" class="inp px-3" placeholder="email-Id" id="mail" name="email">
+                        </div>
+                        <div *ngIf="this.registerForm.get('email')?.errors && this.registerForm.get('email')?.touched" class="text-start mt-2">
+                            <p class="text-danger fs-5">Enter Your email-Id</p>
+                          </div>
+
+                    </div>
+
+
+                    <div class="form-row py-3 pt-5">
+
+                        <div class="offset-1 col-lg-10">
+                            <input formControlName="password"  type="password" class="inp px-3" placeholder="password" id="password" name="userpassword">
+                        </div>
+                        <div *ngIf="this.registerForm.get('password')?.errors && this.registerForm.get('password')?.touched" class="text-start mt-2">
+                            <p class="text-danger fs-5">Enter Your Password </p>
+                          </div>
+
+                    </div>
+
+                    <div class="form-row py-3 pt-5">
+
+                        <div class="offset-1 col-lg-10">
+                            <button (click)="register()" type="submit" class="btn1">Register</button>
+                        </div>
+
+                    </div>
+
+                </form>
+                <p>Already have an Account? <a routerLink="/product/login">Login</a></p>
+
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+</section>

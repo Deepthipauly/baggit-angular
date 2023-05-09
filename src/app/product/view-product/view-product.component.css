@@ -1,0 +1,11 @@
+.productImage {
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .productImage:hover{
+  
+      transform: scale(1.1);
+  
+  }
+  

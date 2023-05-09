@@ -1,0 +1,76 @@
+
+<section class="contact">
+    <img src="https://i.postimg.cc/8CdPL0jP/contact-us.jpg" class="img-fluid mb-2" alt="Responsive image">
+
+    <div class="content mt-2">
+        <h2 class="mt-2">Customer Care</h2>
+        <p class="fs-4">
+            Let's collaborate as we invite you to be a part of our journey to grow and succeed together. Get in touch,
+            today!
+        </p>
+    </div>
+    <div class="container">
+        <div class="contactInfo">
+            <div class="box">
+                <div class="icon"> <i class="fa-solid fa-location-dot fa-beat-fade fa-2xs"></i></div>
+                <div class="text">
+                    <h3>Address</h3>
+                    <p>Lorem ipsum dolor</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-envelope fa-beat-fade fa-2xs"></i> </div>
+                <div class="text">
+                    <h3>Email</h3>
+                    <p>Lorem ipsum dolor</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-phone fa-beat-fade fa-2xs"></i> </div>
+                <div class="text">
+                    <h3>Contact</h3>
+                    <p>Lorem ipsum dolor</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="contactForm">
+            <form [formGroup]="contactForm">
+                <h2>Keep In Touch</h2>
+                <div class="inputBox">
+                    <input formControlName="name" type="text" name="fullname" id="name" required>
+                    <span>Name</span>
+                </div>
+                <div *ngIf="this.contactForm.get('name')?.errors && this.contactForm.get('name')?.touched" class="text-start mt-2">
+                    <p class="text-danger fs-5">Enter Your Name</p>
+                  </div>
+
+                <div class="inputBox">
+                    <input formControlName="email" type="email" name="email" id="mail" required>
+                    <span>Email</span>
+                </div>
+
+                <div *ngIf="this.contactForm.get('email')?.errors && this.contactForm.get('email')?.touched" class="text-start mt-2">
+                    <p class="text-danger fs-5">Enter Your email</p>
+                  </div>
+
+                <div  class="inputBox">
+               <input formControlName="message" name="" id="" required>
+                    <span>Message:</span>
+                </div>
+
+
+                <div *ngIf="this.contactForm.get('message')?.errors && this.contactForm.get('message')?.touched" class="text-start mt-2">
+                    <p class="text-danger fs-5">Type your Message</p>
+                  </div>
+
+                <div class="inputBox">
+
+                    <input (click)="contact()" type="submit" name="email" id="mail" value="send">
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</section>

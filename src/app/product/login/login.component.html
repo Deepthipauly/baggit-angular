@@ -1,0 +1,58 @@
+<section class="login">
+
+    <div class="container py-5 bg-light">
+        <div class="row g-0">
+
+            <div class="col-lg-5">
+                <img src="https://i.postimg.cc/Xq131WH7/jjj.jpg" alt="" class="img-fluid">
+
+            </div>
+
+            <div class="col-lg-7 py-5 text-center">
+                <h1 class="animate__animated animate__heartBeat animate_infinite"> Welcome Back </h1>
+
+                <form [formGroup]="loginForm">
+
+                    <div class="form-row py-3 pt-5">
+
+                        <div class="offset-1 col-lg-10">
+                            <input  formControlName="email" type="text" class="inp px-3" placeholder="email">
+                        </div>
+                        <div *ngIf="this.loginForm.get('email')?.errors && this.loginForm.get('email')?.touched" class="text-start mt-2">
+                            <p class="text-danger fs-5">enter email-Id</p>
+                          </div>
+
+                    </div>
+
+                    <div class="form-row py-3 pt-5">
+
+                        <div class="offset-1 col-lg-10">
+                            <input formControlName="password" type="password" class="inp px-3" placeholder="password">
+                        </div>
+                        <div *ngIf="this.loginForm.get('password')?.errors && this.loginForm.get('password')?.touched" class="text-start mt-2">
+                            <p class="text-danger fs-5">Enter Password</p>
+                          </div>
+
+                    </div>
+                    <div class="form-row py-3 pt-5">
+
+                        <div class="offset-1 col-lg-10">
+                            <button type="submit"  (click)="login()" class="btn1">Login</button>
+                        </div>
+
+                    </div>
+
+                </form>
+                <p>Don't have an Account? <a routerLink="/product/register">Register</a></p>
+
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+</section>

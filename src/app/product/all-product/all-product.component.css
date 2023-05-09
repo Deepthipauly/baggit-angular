@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.icon {
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.icon:hover {
+  transform: scale(1.5);
+}
+
+.productImage {
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.productImage:hover{
+
+    transform: scale(1.1);
+
+}
+

@@ -1,0 +1,126 @@
+<div class="container-fluid">
+    <div class="row" style="text-decoration: none;">
+
+
+        <div class="col-3 text-center mt-3 mb-3" >
+
+            <a style="text-decoration: none; color: black;">
+                <img class="rounded-circle icon" src="https://i.postimg.cc/pLMByf53/icon-all-1.jpg" alt="">
+                <h6 (click)='filter("")'>All</h6>
+            </a>
+        </div>
+        <div class="col-3 text-center mt-3 mb-3">
+
+            <a  style="text-decoration: none; color: black;">
+                <img class="rounded-circle icon" src="https://i.postimg.cc/mkGQhRtC/men-icon.jpg" alt="">
+                <h6 (click)='filter("MEN")' >Men</h6>
+            </a>
+        </div>
+
+        <div class="col-3 text-center mt-3 mb-3">
+
+            <a style="text-decoration: none; color: black;">
+                <img class="rounded-circle icon" src="https://i.postimg.cc/Xv717fT4/women-icon-1.jpg" alt="">
+                <h6 (click)='filter("WOMEN")'>Women</h6>
+            </a>
+        </div>
+
+        <div class="col-3 text-center mt-3 mb-3">
+
+            <a style="text-decoration: none; color: black;">
+                <img class="rounded-circle icon" src="https://i.postimg.cc/dtyzz9Kf/allll-1.jpg" alt="">
+                <h6 (click)='filter("")'>New Arrivals</h6>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://i.postimg.cc/vBvXH16T/image1c.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="https://i.postimg.cc/gjgD3ndJ/image2c.webp" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="https://i.postimg.cc/nhB3PVGd/image3c.webp" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
+
+
+
+<!-- Section-->
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col col-md-4 mb-5" *ngFor="let i of filterCategory | filter: searchString : 'name' ">
+                <div class="card h-100 productImage">
+                    <!-- Product image-->
+                    <img  class="card-img-top" style="height: 250px;" src="{{i.image}}" />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fs-5">{{i.name}}</h5>
+                            <!-- Product price-->
+                            &#8377; {{i.price}} <br>
+                            &#9733;{{i.rating}} <br>
+                            {{i.brand}}
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer m-2 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" routerLink="/product/view-product/{{i._id}}">View</a>
+                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="advertisement">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail ps-3 pb-3">
+                    <img src="https://i.postimg.cc/XYVmjc06/footer6.webp" alt="Lights"
+                        style="width:100%; height:500px;">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail pb-3">
+                    <img src="https://i.postimg.cc/6QCvMRyT/footer4.webp" alt="Lights"
+                        style="width:100%; height:500px;">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail pe-3 pb-3">
+                    <img src="https://i.postimg.cc/bYgQXQLt/footer5.webp" alt="Lights"
+                        style="width:100%; height:500px;">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
