@@ -14,10 +14,14 @@
                     <span>Rating&#9733; <strong>{{j.id.rating}}</strong></span><br>
                     <span>Quantity <strong>{{j.quantity}}</strong></span><br>
                     <span>Order Date :{{j.orderDate | date:'medium'}}</span><br>
+                
                 </div>
+        
 
             </div>
+            <hr>
         </div>
+     
     </div>
 
     <div *ngIf="!MyOrders()" class="container px-4 px-lg-5 my-" style="text-align: center;">
