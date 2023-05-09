@@ -17,14 +17,16 @@
 
 .btn2{
 
-    height: 50px;
-    width: 30%;
+    height: 30px;
+    width: 10%;
     border: none;
     outline: none;
-    border-radius: 30px;
-    font-weight: 300;
+    border-radius: none;
+    font-weight: 400;
     background: rgb(11, 203, 31);
     color: azure;
+    font-size: medium;
+    margin-bottom: 4px;
 }
 
 .btn2:hover{
