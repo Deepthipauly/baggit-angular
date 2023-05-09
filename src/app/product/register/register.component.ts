@@ -44,7 +44,7 @@ export class RegisterComponent {
       },
         result => {
 
-          alert(result.error.message) 
+          alert(result.error.error) 
         })}
     else {
       alert("incorrect email or password")

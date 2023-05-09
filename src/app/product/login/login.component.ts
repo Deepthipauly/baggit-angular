@@ -48,21 +48,26 @@ export class LoginComponent {
           this.ps.setUsername(data.data.name);
           alert(data.message)
           this.router.navigateByUrl("")
-  
+
         },
   
           data => {
-            alert(data.error.message)
+            console.log("data",data);
+            alert(data.error?.error)
   
           }
         )
+
+
+        
       }
       else {
-        alert('invalid form')
+        alert('incorrect email or password')
       }
+
+     
     
-  
-  
+
   }
 
 
